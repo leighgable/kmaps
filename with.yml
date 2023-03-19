@@ -1,0 +1,13 @@
+session_name: main-jax
+windows:
+  - window_name: jax
+    layout: even-horizontal
+    panes:
+      - shell_command:
+          - sleep 1
+          - clear
+      - shell_command:
+          - sleep 1
+          - tmux resize-pane -x 50
+          - clear
+        

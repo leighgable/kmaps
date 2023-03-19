@@ -1,0 +1,28 @@
+# https://numtide.github.io/devshell
+[devshell]
+packages = [
+    "gcc",
+    "openssl",
+    "openssl.dev",
+    "zlib",
+    "zlib.dev",
+    "stdenv.cc.cc.lib", 
+
+
+
+    # Python
+    "python311",
+    "python311Packages.setuptools",
+]
+
+[[env]]
+name = "CPPFLAGS"
+eval = "-I${DEVSHELL_DIR}/include"
+
+[[env]]
+name = "LDFLAGS"
+eval = "-L${DEVSHELL_DIR}/lib"
+
+[[env]]
+name = "LD_LIBRARY_PATH"
+eval = "${DEVSHELL_DIR}/lib:${LD_LIBRARY_PATH}"
